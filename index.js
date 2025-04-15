@@ -7,7 +7,9 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/hello', async (req, res) => {
-    res.status(200).json({ message: "Hello world" })
+    console.log(req.body);
+
+    return res.status(200).json({ message: "Hello world" })
 })
 
 app.get('/hello2', async (req, res) => {
