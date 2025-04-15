@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/hello', async (req, res) => {
+app.post('/hello', async (req, res) => {
     console.log(req.body);
 
     return res.status(200).json({ message: "Hello world" })
